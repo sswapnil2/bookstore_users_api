@@ -17,3 +17,11 @@ func NewBadRequestError(message string) *RestErr {
 		Message: message,
 	}
 }
+
+func NewNotFoundError(message string) *RestErr {
+	return &RestErr{
+		Status:  http.StatusNotFound,
+		Error:   "not_found",
+		Message: message,
+	}
+}
